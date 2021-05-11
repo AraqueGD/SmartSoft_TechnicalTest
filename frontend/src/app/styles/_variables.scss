@@ -1,0 +1,13 @@
+// Reset Styles
+
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+// Scss Varibales
+$main-font: sans-serif;
+$main-color: rgba(223, 52, 10, 0.8);
+$text-color: #fff;
+$hover-color: rgba(36, 40, 43, 0.8);
+$boder-radius: 4px;

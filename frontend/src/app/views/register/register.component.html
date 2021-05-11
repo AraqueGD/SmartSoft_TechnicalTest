@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="loginForm">
+        <div class="logo">
+            <img src="assets/trafalgar.png" alt="logo-icon">
+        </div>
+        <form [formGroup]="registerForm" (ngSubmit)="onRegister(registerForm.value)">
+            <div class="form-group">
+                <div class="form-sub-group">
+                    <span class="icon">
+                        <i class="fas fa-signature"></i>
+                    </span>
+                </div>
+                <div class="form-sub-group">
+                    <input type="text" formControlName="firstName" id="firstName" placeholder="FirstName">
+                    <label for="firstName">FirstName</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-sub-group">
+                    <span class="icon">
+                        <i class="fas fa-signature"></i>
+                    </span>
+                </div>
+                <div class="form-sub-group">
+                    <input type="text" formControlName="lastName" id="lastName" placeholder="lastName">
+                    <label for="lastName">LastName</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-sub-group">
+                    <span class="icon">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                </div>
+                <div class="form-sub-group">
+                    <input type="text" formControlName="email" id="email" placeholder="Email">
+                    <label for="email">Email Address</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-sub-group">
+                    <span class="icon">
+                        <i class="fas fa-lock"></i>
+                    </span>
+                </div>
+                <div class="form-sub-group">
+                    <input type="password" formControlName="password" id="password" placeholder="Password">
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <div class="alert" *ngIf="status">
+                <span>{{message}}</span>
+            </div>
+            <div class="form-group-mini">
+                <div class="form-actions">
+                    <input type="submit" value="Register">
+                </div>
+            </div>
+        </form>
+        <div class="illustration">
+            <img src="assets/register.jpg" alt="">
+        </div>
+    </div>
+</div>
