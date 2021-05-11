@@ -1,0 +1,20 @@
+{
+   "compilerOptions": {
+      "lib": [
+         "es5",
+         "es6",
+         "DOM"
+      ],
+      "target": "es5",
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "outDir": "./dist",
+      "rootDir": "./src",
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "skipLibCheck": true,
+      "sourceMap": true,
+      "strict": false,
+   },
+   // "files": ["types.d.ts"]
+}
