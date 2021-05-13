@@ -15,4 +15,8 @@ export class CategoryController {
 
         return this.categoryRepository.save(newCategory);
     }
+
+    async getProductsForCategory(req: Request, res: Response): Promise<Response> {
+        return await this.categoryRepository.findOne(req.params.id, {relations: ["products"]});
+    }
 }

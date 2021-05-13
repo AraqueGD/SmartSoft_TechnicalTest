@@ -23,7 +23,7 @@ export class AuthController {
         newUser.password = newUser.setPassword(newUser.password);
         await this.userRepository.save(newUser);
         const token: string = newUser.generateJWT();
-        return JSON.stringify({"authToken": token});
+        return res.header("auth-token", token).json({"authToken": token, "id": newUser.id});
     }
 
     async signIn(req: Request, res: Response): Promise<Response> {
@@ -43,7 +43,7 @@ export class AuthController {
                 return res.status(401).json({message: "Incorrect Password"})
             }
             const token: string = user.generateJWT();
-            return JSON.stringify({"authToken": token});
+            return res.header("auth-token", token).json({"authToken": token, "id": user.id});
         } catch (error) {
             return res.status(500).json(error);
         }

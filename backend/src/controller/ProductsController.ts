@@ -10,6 +10,10 @@ export class ProductsController{
         return await this.productsRepository.find({relations: ["category"]});
     }
 
+    async getProduct(req: Request, res: Response): Promise<Response> {
+        return await this.productsRepository.findOne(req.params.id, {relations: ["category"]});
+    }
+
     async createProduct(req: Request, res: Response): Promise<Response> {
         const product = new Products();
         product.name = req.body.name;
