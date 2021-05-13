@@ -1,0 +1,103 @@
+@import "_variables";
+
+.abs-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+
+  .form {
+    width: 450px;
+    margin-top: 50px;
+    .form-group {
+      display: flex;
+      padding: 20px;
+      margin-top: 10px;
+      background: #f5f5f5;
+      border-radius: $border-radius;
+      &:focus-within {
+        background: #eeeeee;
+      }
+
+      .form-sub-group {
+        position: relative;
+        &:last-child {
+          flex-grow: 1;
+        }
+        span.icon {
+          margin-right: 10px;
+        }
+        input {
+          font-size: 1em;
+          border: 0;
+          background: transparent;
+          padding: 0;
+          width: 100%;
+          &::placeholder {
+            color: transparent;
+          }
+          &:focus,
+          &:not(:placeholder-shown) {
+            outline: none;
+            transform: translateY(10px);
+            & + label {
+              transform: translateY(-10px) scale(0.75);
+            }
+          }
+        }
+
+        label {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: 0;
+          cursor: text;
+          transform-origin: 0 0;
+          transition: all 0.3s;
+        }
+      }
+    }
+    .alert {
+      padding-top: 15px;
+      span {
+        font-size: small;
+        color: $main-color;
+      }
+    }
+    .form-group-mini {
+      padding: 5px 0;
+      display: flex;
+      justify-content: space-between;
+      .form-actions {
+        input[type="submit"] {
+          padding: 15px 20px;
+          background: $main-color;
+          font-size: 0.85em;
+          color: #fff;
+          cursor: pointer;
+          border: 0;
+          border-radius: $border-radius;
+          transition: all 0.3s;
+          &:hover {
+            background: $hover-color;
+          }
+        }
+      }
+    }
+    .form-group-2 {
+      padding-top: 10px;
+      .form-group-mini {
+        .mat-form-field {
+          .mat-label {
+            color: $main-color !important;
+          }
+          .math-select {
+            &:hover {
+              background-color: $hover-color !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

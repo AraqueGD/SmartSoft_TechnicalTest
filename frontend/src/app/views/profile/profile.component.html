@@ -1,1 +1,93 @@
-<p>profile works!</p>
+<app-header></app-header>
+<div class="profile col-md-4 offset-md-4 p-2">
+    <div class="card">
+        <div class="card-body">
+            <form [formGroup]="editProfile" class="form">
+                <div class="form-group">
+                    <div class="form-sub-group">
+                        <span class="icon">
+                            <i class="fas fa-signature"></i>
+                        </span>
+                    </div>
+                    <div class="form-sub-group">
+                        <input type="text" formControlName="firstName" id="firstName" placeholder="firstName">
+                        <label for="firstName">First Name</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-sub-group">
+                        <span class="icon">
+                            <i class="fas fa-signature"></i>
+                        </span>
+                    </div>
+                    <div class="form-sub-group">
+                        <input type="text" formControlName="lastName" id="lastName" placeholder="lastName">
+                        <label for="lastName">Last Name</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-sub-group">
+                        <span class="icon">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                    </div>
+                    <div class="form-sub-group">
+                        <input type="text" formControlName="email" id="email" placeholder="email">
+                        <label for="email">Email Address</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-sub-group">
+                        <span class="icon">
+                            <i class="fas fa-venus-mars"></i>
+                        </span>
+                    </div>
+                    <div class="form-sub-group">
+                        <input type="text" formControlName="gender" id="gender" placeholder="gender">
+                        <label for="gender">Gender</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-sub-group">
+                        <span class="icon">
+                            <i class="fas fa-birthday-cake"></i>
+                        </span>
+                    </div>
+                    <div class="form-sub-group">
+                        <input type="text" formControlName="birthday" id="birthday" placeholder="birthday">
+                        <label for="birthday">Birthday</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-sub-group">
+                        <span class="icon">
+                            <i class="fas fa-image"></i>
+                        </span>
+                    </div>
+                    <div class="form-sub-group">
+                        <input type="url" formControlName="photo" id="photo" placeholder="photo">
+                        <label for="photo">Url Photo</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-sub-group">
+                        <span class="icon">
+                            <i class="fas fa-id-card"></i>
+                        </span>
+                    </div>
+                    <div class="form-sub-group">
+                        <input type="text" formControlName="description" id="description" placeholder="description">
+                        <label for="description">Description</label>
+                    </div>
+                </div>
+                <div class="form-group-mini">
+                    <div class="form-actions">
+                        <input type="submit" (click)="editFormUser(editProfile.value)" value="Save">
+                        <span>or</span>
+                        <a class="btn-register" (click)="onDeleteUser()">Delete User</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

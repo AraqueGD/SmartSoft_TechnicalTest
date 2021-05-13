@@ -1,0 +1,26 @@
+<app-header></app-header>
+<div class="row py-2">
+  <app-sidebar class="col-md-5"></app-sidebar>
+  <div class="col-md-4">
+    <h1>Products</h1>
+    <button class="btn d-flex" (click)="createProduct()">Create</button>
+    <table class="table table-hover content-table">
+        <thead>
+          <tr>
+            <th >Name</th>
+            <th >Price</th>
+            <th >Category</th>
+            <th >Inventory</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products" (click)="editProduct(product.id)">
+            <th >{{product.name}}</th>
+            <td>${{product.price}}</td>
+            <td>{{category.name}}</td>
+            <td>{{product.inventory}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+</div>

@@ -1,1 +1,53 @@
-<p>edit-product works!</p>
+<app-header></app-header>
+<div class="container">
+  <div class="abs-center">
+    <div class="row">
+      <form [formGroup]="editForm" class="border p-3 form">
+        <div class="col">
+            <div class="form-group">
+              <div class="form-sub-group">
+                <span class="icon">
+                  <i class="fas fa-cart-plus"></i>
+                </span>
+              </div>
+              <div class="form-sub-group">
+                <input type="text" formControlName="name" id="name" placeholder="name">
+                <label for="name">Product Name</label>
+              </div>
+            </div>
+            <div class="form-group">
+                <div class="form-sub-group">
+                  <span class="icon">
+                    <i class="fas fa-dollar-sign"></i>
+                  </span>
+                </div>
+                <div class="form-sub-group">
+                  <input type="number" formControlName="price" id="price" placeholder="price">
+                  <label for="price">Price</label>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <div class="form-sub-group">
+              <span class="icon">
+                <i class="fas fa-boxes"></i>
+              </span>
+            </div>
+            <div class="form-sub-group">
+              <input type="number" formControlName="inventory" id="inventory" placeholder="inventory">
+              <label for="inventory">Inventory</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group-mini">
+          <div class="form-actions">
+            <input type="submit" (click)="updateProduct(editForm.value)" value="Update">
+            <span>or</span>
+            <a class="btn-delete" (click)="delProduct(editForm.value)">Delete</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

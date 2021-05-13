@@ -21,7 +21,7 @@
         padding: 20px;
         margin-top: 10px;
         background: #f5f5f5;
-        border-radius: $boder-radius;
+        border-radius: $border-radius;
         &:focus-within {
           background: #eeeeee;
         }
@@ -83,7 +83,7 @@
             color: #fff;
             cursor: pointer;
             border: 0;
-            border-radius: $boder-radius;
+            border-radius: $border-radius;
             transition: all 0.3s;
             &:hover {
               background: $hover-color;
@@ -93,12 +93,12 @@
             padding: 20px;
           }
           a.btn-register {
-            padding: 15px 20px;
+            padding: 18px 15px;
             background: $hover-color;
             font-size: 0.85em;
             color: #fff;
             text-decoration: none;
-            border-radius: $boder-radius;
+            border-radius: $border-radius;
             transition: all 0.3s;
             cursor: pointer;
             &:hover {

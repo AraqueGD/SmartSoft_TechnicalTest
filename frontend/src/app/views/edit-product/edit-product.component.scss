@@ -1,0 +1,105 @@
+@import "_variables";
+
+.abs-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+
+  .form {
+    width: 450px;
+    margin-top: 50px;
+    .form-group {
+      display: flex;
+      padding: 20px;
+      margin-top: 10px;
+      background: #f5f5f5;
+      border-radius: $border-radius;
+      &:focus-within {
+        background: #eeeeee;
+      }
+
+      .form-sub-group {
+        position: relative;
+        &:last-child {
+          flex-grow: 1;
+        }
+        span.icon {
+          margin-right: 10px;
+        }
+        input {
+          font-size: 1em;
+          border: 0;
+          background: transparent;
+          padding: 0;
+          width: 100%;
+          &::placeholder {
+            color: transparent;
+          }
+          &:focus,
+          &:not(:placeholder-shown) {
+            outline: none;
+            transform: translateY(10px);
+            & + label {
+              transform: translateY(-10px) scale(0.75);
+            }
+          }
+        }
+
+        label {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: 0;
+          cursor: text;
+          transform-origin: 0 0;
+          transition: all 0.3s;
+        }
+      }
+    }
+    .alert {
+      padding-top: 15px;
+      span {
+        font-size: small;
+        color: $main-color;
+      }
+    }
+    .form-group-mini {
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      .form-actions {
+        input[type="submit"] {
+          padding: 15px 20px;
+          background: $main-color;
+          font-size: 0.85em;
+          color: #fff;
+          cursor: pointer;
+          border: 0;
+          border-radius: $border-radius;
+          transition: all 0.3s;
+          &:hover {
+            background: $hover-color;
+          }
+        }
+        span {
+          padding: 20px;
+        }
+        a.btn-delete {
+          padding: 15px 20px;
+          padding-left: 20px;
+          background: $hover-color;
+          font-size: 0.85em;
+          color: #fff;
+          text-decoration: none;
+          border-radius: $border-radius;
+          transition: all 0.3s;
+          cursor: pointer;
+          &:hover {
+            background: $delete-color;
+          }
+        }
+      }
+    }
+  }
+}

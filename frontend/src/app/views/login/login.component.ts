@@ -40,6 +40,7 @@ export class LoginComponent implements OnInit {
       console.log(data.authToken);
       if(data.authToken) {
         localStorage.setItem("auth-token", data.authToken);
+        localStorage.setItem("id", data.id);
         this.router.navigate(["home"]);
       }
     },
