@@ -26,7 +26,7 @@ Page where login your user, with the fields completes:
 
 Page where Display all Products Created
 
-![createCategory]("resources/createCategory,png.PNG")
+![createCategory](resources/createCategory,png.PNG)
 
 In Button Create can Category this click, display Input Field Create New Category
 
@@ -43,7 +43,7 @@ Page where can create your product, with the fields completes:
 
 Page where can edit your product and Delete Product
 
-![productsCategory]("resources/createCategory,png.PNG")
+![productsCategory](resources/createCategory,png.PNG)
 
 Page where can query products for category
 
