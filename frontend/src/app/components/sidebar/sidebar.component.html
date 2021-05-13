@@ -1,1 +1,35 @@
-<p>sidebar works!</p>
+<div class="col-md-4">
+    <div class="card bg-light">
+      <div class="card-body">
+        <h1>Categorys</h1>
+        <ng-container *ngIf="!isCreateCategory; else isCreate">
+          <div class="center">
+            <button (click)="isCreateCategory = true" class="btn">Create Category</button>
+          </div>
+        </ng-container>
+        <ng-template #isCreate>
+          <form [formGroup]="postForm" class="border p-3 form">
+            <div class="form-group">
+                <div class="form-sub-group">
+                  <span class="icon">
+                    <i class="fas fa-tags"></i>
+                  </span>
+                </div>
+                <div class="form-sub-group">
+                  <input type="text" formControlName="name" id="name" placeholder="name">
+                  <label for="name">Category Name</label>
+                </div>
+              </div>
+              <div class="form-group-mini">
+                <div class="form-actions" (click)="isCreateCategory = false">
+                  <input type="submit" (click)="createCategory(postForm.value)" value="Create">
+                </div>
+              </div>
+          </form>
+        </ng-template>
+        <ul class="categorys" (click)="refreshComponent(id)" *ngFor="let category of categorys">
+          <li (click)="onProductsForCategory(category.id)">{{category.name}}</li>
+        </ul>
+      </div>
+    </div>
+</div>

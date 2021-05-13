@@ -1,0 +1,46 @@
+@import "_variables";
+
+.navbar-dark {
+  background-color: $bgDefault;
+  border-color: $bgHighlight !important;
+  .navbar-brand {
+    color: $colDefault;
+    &:hover,
+    &:focus {
+      color: $colHover !important;
+    }
+  }
+  div {
+    .navbar-nav {
+      a {
+        &:hover,
+        &focus {
+          color: $colHover;
+          cursor: pointer;
+        }
+      }
+      .active {
+        color: $colHover !important;
+      }
+    }
+  }
+  .navbar-toggler {
+    &:hover,
+    &:focus {
+      background-color: $bgHighlight;
+    }
+    .icon-bar {
+      background-color: $colDefault;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: $colDefault;
+    &:hover,
+    &:focus {
+      color: $colHover;
+      background-color: $bgHighlight;
+    }
+  }
+}
