@@ -56,6 +56,12 @@ export const Routes = [{
     action: "getProducts"
 },
 {
+    method: "get",
+    route: "/api/products/:id",
+    controller: ProductsController,
+    action: "getProduct"
+},
+{
     method: "post",
     route: "/api/products",
     controller: ProductsController,
@@ -88,6 +94,12 @@ export const Routes = [{
     route: "/api/category",
     controller: CategoryController,
     action: "createCategory"
+},
+{
+    method: "get",
+    route: "/api/category/:id",
+    controller: CategoryController,
+    action: "getProductsForCategory"
 },
 
     /* API CATEGORY END */
