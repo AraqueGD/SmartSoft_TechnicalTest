@@ -44,15 +44,24 @@ var ProfileController = /** @class */ (function () {
     }
     ProfileController.prototype.getProfile = function (req, res) {
         return __awaiter(this, void 0, void 0, function () {
-            var user;
+            var user, newUser;
             return __generator(this, function (_a) {
                 switch (_a.label) {
-                    case 0: return [4 /*yield*/, this.userRepository.findOne(req.userId, { select: ["firstName", "lastName", "email", "createdAt", "updateAt", "profile"] })];
+                    case 0: return [4 /*yield*/, this.userRepository.findOne(req.userId, { select: ["id", "firstName", "lastName", "email", "createdAt", "updateAt", "profile"] })];
                     case 1:
                         user = _a.sent();
                         if (!user)
                             return [2 /*return*/, res.status(404).json({ message: "Not User Found" })];
-                        return [4 /*yield*/, this.userRepository.findOne(user, { relations: ["profile"] })];
+                        newUser = {
+                            id: user.id,
+                            firstName: user.firstName,
+                            lastName: user.lastName,
+                            email: user.email,
+                            createdAt: user.createdAt,
+                            updateAt: user.updateAt,
+                            profile: user.profile
+                        };
+                        return [4 /*yield*/, this.userRepository.findOne(newUser.id, { select: ["id", "firstName", "lastName", "email"], relations: ["profile"] })];
                     case 2: return [2 /*return*/, _a.sent()];
                 }
             });

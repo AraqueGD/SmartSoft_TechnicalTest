@@ -56,6 +56,12 @@ exports.Routes = [{
         action: "getProducts"
     },
     {
+        method: "get",
+        route: "/api/products/:id",
+        controller: ProductsController_1.ProductsController,
+        action: "getProduct"
+    },
+    {
         method: "post",
         route: "/api/products",
         controller: ProductsController_1.ProductsController,
@@ -86,6 +92,12 @@ exports.Routes = [{
         route: "/api/category",
         controller: CategoryController_1.CategoryController,
         action: "createCategory"
+    },
+    {
+        method: "get",
+        route: "/api/category/:id",
+        controller: CategoryController_1.CategoryController,
+        action: "getProductsForCategory"
     },
     /* API CATEGORY END */
     {

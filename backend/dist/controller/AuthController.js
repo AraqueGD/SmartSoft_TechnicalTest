@@ -64,7 +64,7 @@ var AuthController = /** @class */ (function () {
                     case 1:
                         _a.sent();
                         token = newUser.generateJWT();
-                        return [2 /*return*/, JSON.stringify({ "authToken": token })];
+                        return [2 /*return*/, res.header("auth-token", token).json({ "authToken": token, "id": newUser.id })];
                 }
             });
         });
@@ -93,7 +93,7 @@ var AuthController = /** @class */ (function () {
                             return [2 /*return*/, res.status(401).json({ message: "Incorrect Password" })];
                         }
                         token = user.generateJWT();
-                        return [2 /*return*/, JSON.stringify({ "authToken": token })];
+                        return [2 /*return*/, res.header("auth-token", token).json({ "authToken": token, "id": user.id })];
                     case 3:
                         error_1 = _b.sent();
                         return [2 /*return*/, res.status(500).json(error_1)];

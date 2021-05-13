@@ -73,7 +73,7 @@ typeorm_1.createConnection().then(function (connection) { return __awaiter(_this
         });
         // start express server
         app.listen(3000);
-        console.log("Express server has started on port 3000. Open http://localhost:3000/api/users to see results");
+        console.log("Express server has started on port 3000. Open http://localhost:3000/ to see results");
         return [2 /*return*/];
     });
 }); }).catch(function (error) { return console.log(error); });
