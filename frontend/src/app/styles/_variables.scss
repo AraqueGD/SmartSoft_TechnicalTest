@@ -5,9 +5,20 @@
   box-sizing: border-box;
 }
 
+.active {
+  color: #e67e22;
+}
+
 // Scss Varibales
 $main-font: sans-serif;
 $main-color: rgba(223, 52, 10, 0.8);
 $text-color: #fff;
 $hover-color: rgba(36, 40, 43, 0.8);
-$boder-radius: 4px;
+$border-radius: 4px;
+$delete-color: rgba(255, 0, 0, 0.8);
+
+// Colors Orange
+$bgDefault: #e67e22;
+$bgHighlight: #d35400;
+$colDefault: #ecf0f1;
+$colHover: #e67e22;
