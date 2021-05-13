@@ -1,4 +1,4 @@
-# SmartSoft_TechnicalTest
+# SmartSoft Technical Test
 
 <img src="resources/klipartz.png" width="100">
 
@@ -8,44 +8,58 @@
 
 ![register](resources/register.png)
 
-Page where register how user, with the fields completes:
+Page where can register how user, with the next fields:
 
 - Frist Name
 - Last Name
 - Email
 - Password
 
+### Login
+
 ![login](resources/login.png)
 
-Page where login your user, with the fields completes:
+Page where you enter user, with the next fields:
 
 - Your Email with the register
-  -Your Password with the register
+- Your Password with the register
+
+### Home
 
 ![home](resources/home.png)
 
 Page where Display all Products Created
 
+### Create Category
+
 ![createCategory](resources/createCategory,png.PNG)
 
-In Button Create can Category this click, display Input Field Create New Category
+On the Create Category button, click and display the Create New Category input field.
+
+### Create Product
 
 ![createProduct](resources/create-product.png)
 
-Page where can create your product, with the fields completes:
+Page where can create your product, with the next fields:
 
 - Name Product
 - Price
 - Inventory
 - Category
 
+### Edit Product
+
 ![editProduct](resources/edit-product.png)
 
 Page where can edit your product and Delete Product
 
+### Products For Category
+
 ![productsCategory](resources/createCategory,png.PNG)
 
 Page where can query products for category
+
+### Profile
 
 ![profile](resources/profile.png)
 
