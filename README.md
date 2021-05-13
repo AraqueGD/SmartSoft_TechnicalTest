@@ -1,6 +1,6 @@
 # SmartSoft_TechnicalTest
 
-<img src="resources/klipartz.png" width="50">
+<img src="resources/klipartz.png" width="80">
 
 ## Trafalgar is a App Web where we can Register, Login, Create, Read, Update and Delete (CRUD) Products!
 
